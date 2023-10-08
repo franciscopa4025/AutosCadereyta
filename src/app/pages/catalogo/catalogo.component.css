@@ -1,0 +1,40 @@
+.custom-img-container2 {
+  width: 100%; /* Ancho deseado para el contenedor de la imagen */
+  height: 200px; /* Altura deseada para el contenedor de la imagen */
+  overflow: hidden;
+
+}
+
+.custom-img2 {
+
+  width: 100%; /* La imagen se ajustará al ancho del contenedor */
+  height: auto; /* La altura se ajustará automáticamente para mantener la proporción */
+  object-fit: cover; /* La imagen se ajustará para cubrir completamente el espacio disponible sin deformación */
+}
+
+.custom-text {
+  font-size: 1em;
+  overflow: hidden; /* Oculta el texto que exceda el contenedor */
+  text-overflow: ellipsis; /* Agrega puntos suspensivos (...) al final del texto recortado */
+
+  height: 2.6em; /* Evita que el texto se divida en varias líneas */
+}
+
+.custom-card .card-title {
+  padding: 0.1rem; /* Espacio interno opcional para el título */
+  margin: 0; /* Elimina los márgenes predeterminados del título */
+}
+
+.custom-text2 {
+  font-size: 1em;
+  overflow: hidden; /* Oculta el texto que exceda el contenedor */
+  text-overflow: ellipsis; /* Agrega puntos suspensivos (...) al final del texto recortado */
+
+  height: 1.5em; /* Evita que el texto se divida en varias líneas */
+}
+
+.custom-card2 .card-title2 {
+
+  padding: 0.1rem; /* Espacio interno opcional para el título */
+  margin: 0; /* Elimina los márgenes predeterminados del título */
+}

@@ -1,0 +1,54 @@
+<div class="page-heading wow fadeIn" data-wow-duration="0.5s">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="heading-content-bg wow fadeIn" data-wow-delay="0.75s" data-wow-duration="1s">
+          <div class="row">
+            <div class="heading-content col-md-12">
+              <p><a href="index.html">Inicio</a> / <em>autos</em></p>
+              <h2>Informacion de <em>Autos</em></h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<br> <br>
+
+
+<div class="container">
+  <h1>Mis Autos</h1>
+  <button class="btn-primary btn"  style="margin: 1em;" routerLink="/add">Agregar un Auto</button>
+
+  <ul class="list-group">
+      <!-- Cada elemento de la lista es un auto con imagen a la izquierda, título y switch a la derecha -->
+      <li class="list-group-item d-flex justify-content-between align-items-center" *ngFor="let auto of Autostodos">
+        <a href="/auto/{{auto.id}}">
+          <div class="d-flex">
+            <div class="custom-img-container">
+            <img [src]="auto.foto1Url" alt="Auto"  class="card-img-top custom-img" ></div>
+            <div class="ml-3">
+              <h3>{{auto.marca}} {{auto.modelo}} {{auto.Ano}}</h3>
+              <h5>${{auto.precio}}</h5>
+              <p>ID: {{auto.id}}</p>
+            </div>
+          </div>
+        </a>
+
+        <div class="d-flex align-items-center">
+
+          <button type="button" class="btn btn-primary mr-3"  (click)="editar(auto.id)" >Editar</button>
+          <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" [id]="'switch' + auto.id" [(ngModel)]="auto.disponible" (change)="onCheckboxChange(auto.id,auto.disponible)">
+            <label class="form-check-label" [for]="'switch' + auto.id">Disponible</label>
+          </div>
+        </div>
+      </li>
+
+
+      <!-- Agrega más elementos de lista según tus autos -->
+  </ul>
+</div>
+
+

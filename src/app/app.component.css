@@ -1,0 +1,30 @@
+
+/* Agregar margen al contenido del navbar */
+.navbar .navbar-collapse {
+  margin-top: 20px; /* Ajusta el valor según tus necesidades */
+}
+
+/* Ajustar margen a los elementos de la barra de navegación (por ejemplo, enlaces) */
+.navbar .navbar-nav .nav-item {
+  margin-right: 10px; /* Espacio entre elementos de la barra de navegación */
+}/* Estilos personalizados para aumentar el grosor del navbar */
+.navbar {
+  margin-left: 50px;
+  min-height: 80px; /* Altura de la barra de navegación */
+  padding: 15px 0; /* Espaciado vertical dentro de la barra de navegación */
+}
+
+.navbar-brand {
+  font-size: 24px; /* Tamaño de la fuente del logotipo */
+  font-weight: bold; /* Peso de la fuente del logotipo */
+}
+
+.navbar-nav .nav-link {
+  font-size: 18px; /* Tamaño de la fuente de los enlaces de navegación */
+  margin-right: 20px; /* Espaciado entre los enlaces de navegación */
+}
+
+/* Ajusta el tamaño del icono del botón de alternar (hamburguesa) en pantallas pequeñas */
+.navbar-toggler-icon {
+  font-size: 24px;
+}

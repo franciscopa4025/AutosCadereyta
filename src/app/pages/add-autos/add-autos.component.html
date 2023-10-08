@@ -1,0 +1,156 @@
+<div class="page-heading wow fadeIn" data-wow-duration="0.5s">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="heading-content-bg wow fadeIn" data-wow-delay="0.75s" data-wow-duration="1s">
+          <div class="row">
+            <div class="heading-content col-md-12">
+              <p><a href="index.html">Inicio</a> / <em> agregar</em> / <em> Auto</em></p>
+              <h2>Añadir <em>Auto</em></h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+  <div class="container mt-5 border p-4" style="width: 60em; padding: 2em;" >
+    <h4>Rellena el formulario para añadir nuevo auto</h4>
+    <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()" class="container ">
+      <div class="form-group">
+        <label for="marca">Marca:</label>
+        <select id="marca" formControlName="Marca" class="form-control" required>
+          <option value="" disabled selected>Selecciona una marca</option>
+          <option *ngFor="let marca of marcas" [value]="marca">{{ marca }}</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="modelo">Modelo:</label>
+        <input type="text" id="modelo" formControlName="Modelo" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="año">Año del auto:</label>
+        <select id="año" formControlName="Año" class="form-control" required>
+          <option value="" disabled selected>Selecciona el Año</option>
+          <option *ngFor="let ano of ano" [value]="ano">{{ ano }}</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="color">Color del auto:</label>
+        <input type="text" id="color" formControlName="Color" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="precio">Precio:</label>
+        <input type="number" id="precio" formControlName="Precio" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="cilindros">Cilindros:</label>
+        <input type="number" id="cilindros" formControlName="Cilindros" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="kilometraje">Kilometraje:</label>
+        <input type="number" id="kilometraje" formControlName="Kilometraje" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="trasmision">Trasmision del Auto:</label>
+        <select id="trasmision" formControlName="Transmision" class="form-control" required>
+          <option value="" disabled selected>Selecciona la trasmision</option>
+          <option *ngFor="let trasmision of trasmision" [value]="trasmision">{{ trasmision }}</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="EstadoVehiculo">Estado del auto:</label>
+        <select id="EstadoVehiculo" formControlName="EstadoVehiculo" class="form-control" required>
+          <option value="" disabled selected>Selecciona el estado del auto</option>
+          <option *ngFor="let EstadoVehiculo of estado" [value]="EstadoVehiculo">{{ EstadoVehiculo }}</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="motor">Motor:</label>
+        <input type="text" id="motor" formControlName="Motor" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="Combustible">Combustible:</label>
+        <select id="Combustible" formControlName="Combustible" class="form-control" required>
+          <option value="" disabled selected>Selecciona un combustible</option>
+          <option *ngFor="let combustible of combustible" [value]="combustible">{{ combustible }}</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="factura">Factura:</label>
+        <input type="text" id="factura" formControlName="Factura" class="form-control" required>
+      </div>
+
+      <div class="form-group">
+        <label for="numeroDueños">Número de dueños anteriores:</label>
+        <select id="numeroDueños" formControlName="NumeroDeDueños" class="form-control" required>
+          <option value="" disabled selected>Selecciona cantidad de dueños</option>
+          <option *ngFor="let duenos of duenos" [value]="duenos">{{ duenos }}</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="InformacionPapeles">Información relacionada con los documentos del auto:</label>
+        <select id="InformacionPapeles" formControlName="InformacionPapeles" class="form-control" required>
+          <option value="" disabled selected>Selecciona documentacion del auto:</option>
+          <option *ngFor="let papeles of papeles" [value]="papeles">{{ papeles }}</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="fechaRegistro">Fecha de registro del auto:</label>
+        <input type="date" id="fechaRegistro" formControlName="FechaRegistro" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="caracteristicas">Características adicionales del auto:</label>
+        <input type="text" id="caracteristicas" formControlName="Caracteristicas" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="descripcion">Descripción detallada del auto:</label>
+        <textarea id="descripcion" formControlName="Descripcion" class="form-control" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="disponible">¿Está disponible para la  venta?  </label><br>
+        <input type="checkbox" id="disponible" formControlName="Disponible" class="form-check-input">
+      </div>
+
+      <div class="form-group">
+        <label for="foto1Url">Subir la primera foto:</label>
+        <input type="file" id="foto1Url" (change)="foto1($event)"  class="form-control" >
+      </div>
+      <div class="form-group">
+        <label for="foto2Url">Subir la segunda foto:</label>
+        <input type="file" id="foto2Url" (change)="foto2($event)"  class="form-control" >
+      </div>
+
+      <div class="form-group">
+        <label for="foto3Url">Subir la  tercera foto:</label>
+        <input type="file" id="foto3Url"  (change)="foto3($event)"   class="form-control" >
+      </div>
+      <div class="form-group">
+        <label for="foto4Url">Subir la  cuarta foto:</label>
+        <input type="file" id="foto4Url"  (change)="foto4($event)"   class="form-control" >
+      </div>
+      <div class="form-group">
+        <label for="foto5Url">Subir la quinta foto:</label>
+        <input type="file" id="foto5Url"  (change)="foto5($event)"   class="form-control" >
+      </div>
+      <div class="form-group">
+        <label for="foto6Url">Subir la sexta foto:</label>
+        <input type="file" id="foto6Url"   (change)="foto6($event)"  class="form-control" >
+      </div>
+      <div class="form-group">
+        <label for="foto7Url">Subir la séptima foto:</label>
+        <input type="file" id="foto7Url"  (change)="foto7($event)"  class="form-control" >
+      </div>
+
+      <button type="submit"  [class.disabled]="!registrationForm.valid" class="btn btn-primary">Guardar</button>
+    </form>
+
+</div>
+
+
+

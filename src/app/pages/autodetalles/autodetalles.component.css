@@ -1,0 +1,18 @@
+.sp-image1{
+  width: 100%; /* La imagen se ajustará al ancho del contenedor */
+  height: auto; /* La altura se ajustará automáticamente para mantener la proporción */
+  object-fit: cover; /* La imagen se ajustará para cubrir completamente el espacio disponible sin deformación */
+}
+.custom-img-container2 {
+  width: 100%; /* Ancho deseado para el contenedor de la imagen */
+  height: 200px; /* Altura deseada para el contenedor de la imagen */
+  overflow: hidden;
+
+}
+
+.custom-img2 {
+
+  width: 100%; /* La imagen se ajustará al ancho del contenedor */
+  height: auto; /* La altura se ajustará automáticamente para mantener la proporción */
+  object-fit: cover; /* La imagen se ajustará para cubrir completamente el espacio disponible sin deformación */
+}

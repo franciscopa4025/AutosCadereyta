@@ -1,0 +1,10 @@
+.telefono{
+
+    color: black;
+    text-decoration: none; /* Quita la subrayado predeterminado de los enlaces */
+    transition: color 0.2s ease-in-out; /* Agrega una transición suave al cambio de color */
+
+}
+.telefono:hover {
+  color: #25d366; /* Color verde de WhatsApp */
+}
