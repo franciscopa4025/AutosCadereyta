@@ -5,7 +5,7 @@
         <div class="heading-content-bg wow fadeIn" data-wow-delay="0.75s" data-wow-duration="1s">
           <div class="row">
             <div class="heading-content col-md-12">
-              <p><a href="index.html">Inicio</a> / <em> Detalles</em> / <em> Auto</em></p>
+              <p><a >Inicio</a> / <em> Detalles</em> / <em> Auto</em></p>
               <h2>Detalles del <em>Auto</em></h2>
             </div>
           </div>
@@ -85,7 +85,7 @@
                   <li><i class="flaticon flaticon-motor"></i><p>{{auto.motor}}</p></li>
                 </ul>
               </div>
-            </div> <p>Para mas informacion ponte en contacto con gusto te atenderemos:</p>
+            </div> <h3>Para mas informacion ponte en contacto con gusto te atenderemos:</h3>
             <div class="similar-info">
 
 
@@ -114,7 +114,8 @@
             <div class="sep-section-heading">
               <h2>Mas <em>Informacion</em></h2>
             </div>
-            <p> {{auto.descripcion}}</p>
+            <div [innerHTML]="auto.descripcion">
+            <p  > {{auto.descripcion}}</p></div>
           </div>
         </div>
         <div class="col-md-4">
@@ -150,7 +151,7 @@
             <div class="contact-info">
               <div class="row">
                 <div class="phone col-md-12 col-sm-6 col-xs-6">
-                  <i class="fa fa-phone"></i><span>999 548 2120</span>
+                  <i class="fa fa-phone"></i><span>441 688 0492</span>
                 </div>
                 <div class="mail col-md-12 col-sm-6 col-xs-6">
                   <i class="fa fa-envelope"></i><span>youremail@gmail.com</span>

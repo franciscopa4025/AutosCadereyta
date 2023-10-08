@@ -5,7 +5,7 @@
         <div class="heading-content-bg wow fadeIn" data-wow-delay="0.75s" data-wow-duration="1s">
           <div class="row">
             <div class="heading-content col-md-12">
-              <p><a href="index.html">Inicio</a> / <em> Autos</em> / <em> Lista</em></p>
+              <p><a >Inicio</a> / <em> Autos</em> / <em> Lista</em></p>
               <h2>Catalogo de <em>Autos</em></h2>
             </div>
           </div>
@@ -19,51 +19,7 @@
   <div class="container">
     <div class="recent-car-content">
       <div class="row">
-        <div class="col-md-8">
 
-          <div class="row">
-
-            <div class="col-md-6" *ngFor="let autos of Autosmostrar">
-              <div class="car-item">
-                <div class="thumb-content">
-                  <div class="car-banner">
-                    <a href="single_car.html">En venta</a>
-                  </div>
-                  <div class="thumb-inner custom-img-container2">
-                    <a href="single_car.html"><img src={{autos.foto1Url}} alt=""></a>
-                  </div>
-                </div>
-                <div class="down-content">
-                  <a href="single_car.html"><h4 class="card-title2 custom-text2" title="{{autos.marca}} {{autos.modelo}}">{{autos.marca}} {{autos.modelo}}</h4></a>
-                  <span>${{autos.precio}}</span>
-                  <div class="line-dec"></div>
-                  <p class="card-title custom-text" title={{autos.caracteristicas}}> {{autos.caracteristicas}}</p>
-                  <ul class="car-info">
-                    <li><div class="item"><i class="flaticon flaticon-calendar"></i><p>{{autos.Ano}}</p></div></li>
-                    <li><div class="item"><i class="flaticon flaticon-speed"></i><p>{{autos.transmision}}</p></div></li>
-                    <li><div class="item"><i class="flaticon flaticon-road"></i><p>{{autos.kilometraje}}km</p></div></li>
-                    <li><div class="item"><i class="flaticon flaticon-fuel"></i><p>{{autos.combustible}}</p></div></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-
-            <div class="col-md-12">
-              <div class="page-numbers">
-                <div class="pagination-content">
-                  <ul>
-                    <li class="active"><a href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">4</a></li>
-                    <li><a href="#"><i class="fa fa-angle-double-right"></i></a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
         <div class="col-md-4">
           <div class="sidebar-widgets">
             <div class="row">
@@ -144,6 +100,52 @@
             </div>
           </div>
         </div>
+        <div class="col-md-8">
+
+          <div class="row">
+
+            <div class="col-md-6" *ngFor="let autos of Autosmostrar">
+              <div class="car-item">
+                <div class="thumb-content">
+                  <div class="car-banner">
+                    <a href="auto/{{autos.id}}">En venta</a>
+                  </div>
+                  <div class="thumb-inner custom-img-container2">
+                    <a href="auto/{{autos.id}}"><img src={{autos.foto1Url}} alt=""></a>
+                  </div>
+                </div>
+                <div class="down-content">
+                  <a href="auto/{{autos.id}}"><h4 class="card-title2 custom-text2" title="{{autos.marca}} {{autos.modelo}}">{{autos.marca}} {{autos.modelo}}</h4></a>
+                  <span>${{autos.precio}}</span>
+                  <div class="line-dec"></div>
+                  <p class="card-title custom-text" title={{autos.caracteristicas}}> {{autos.caracteristicas}}</p>
+                  <ul class="car-info">
+                    <li><div class="item"><i class="flaticon flaticon-calendar"></i><p>{{autos.Ano}}</p></div></li>
+                    <li><div class="item"><i class="flaticon flaticon-speed"></i><p>{{autos.transmision}}</p></div></li>
+                    <li><div class="item"><i class="flaticon flaticon-road"></i><p>{{autos.kilometraje}}km</p></div></li>
+                    <li><div class="item"><i class="flaticon flaticon-fuel"></i><p>{{autos.combustible}}</p></div></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+<!--
+
+            <div class="col-md-12">
+              <div class="page-numbers">
+                <div class="pagination-content">
+                  <ul>
+                    <li class="active"><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#"><i class="fa fa-angle-double-right"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>-->
+          </div>
+        </div>
+
       </div>
     </div>
   </div>

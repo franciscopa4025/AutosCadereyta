@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule ,Routes} from '@angular/router';
-import { Grafica1Component } from '../pages/grafica1/grafica1.component';
+
 import { BannerComponent } from '../shared/banner/banner.component';
 import { NopagefoundComponent } from '../pages/nopagefound/nopagefound.component';
 import { InicioComponent } from '../pages/inicio/inicio.component';

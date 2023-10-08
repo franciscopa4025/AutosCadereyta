@@ -8,13 +8,12 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { NopagefoundComponent } from './pages/nopagefound/nopagefound.component';
-import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { BreadcrumbsComponent } from './shared/breadcrumbs/breadcrumbs.component';
 import { SiderbardComponent } from './shared/siderbard/siderbard.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { BannerComponent } from './shared/banner/banner.component';
-import { ProgressComponent } from './pages/progress/progress.component';
-import { Grafica1Component } from './pages/grafica1/grafica1.component';
+
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatToolbarModule  } from '@angular/material/toolbar';
@@ -28,7 +27,7 @@ import { NosotrosComponent } from './pages/nosotros/nosotros.component';
 import { ContactoComponent } from './pages/contacto/contacto.component';
 import { AutodetallesComponent } from './pages/autodetalles/autodetalles.component';
 
-import { SNosotrosComponent } from './pages/snosotros/snosotros.component';
+
 import { AddAutosComponent } from './pages/add-autos/add-autos.component';
 import { ListaAutosAdmComponent } from './pages/lista-autos-adm/lista-autos-adm.component';
 import { EditAutosComponent } from './pages/edit-autos/edit-autos.component';
@@ -38,20 +37,18 @@ import { EditAutosComponent } from './pages/edit-autos/edit-autos.component';
     LoginComponent,
     RegisterComponent,
     NopagefoundComponent,
-    DashboardComponent,
+
     BreadcrumbsComponent,
     SiderbardComponent,
     HeaderComponent,
     BannerComponent,
-    ProgressComponent,
-    Grafica1Component,
+
+
     InicioComponent,
     CatalogoComponent,
     NosotrosComponent,
     ContactoComponent,
     AutodetallesComponent,
-
-    SNosotrosComponent,
      AddAutosComponent,
      ListaAutosAdmComponent,
      EditAutosComponent
