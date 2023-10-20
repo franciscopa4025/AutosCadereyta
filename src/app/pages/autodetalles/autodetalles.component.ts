@@ -19,7 +19,7 @@ export class AutodetallesComponent implements  OnInit {
     this.apiService.obtenerAutoPorId(this.autoId).subscribe(data => {
          this.auto=data
 
-         this.meta.addTag({ property: 'og:title', content: 'Autos Cadereyta' });
+         this.meta.addTag({ property: 'og:title', content: 'Autos Cadereytas' });
          this.meta.addTag({ property: 'og:description', content: 'autos' });
          this.meta.addTag({ property: 'og:image', content: 'https://autoscadereytaapi.blob.core.windows.net/autos/8d1b3025-eff9-4e38-bea7-e5f4cd8cafe3.jpg' });
          this.meta.addTag({ property: 'og:url', content: 'https://autoscadereytaapi.blob.core.windows.net/autos/8d1b3025-eff9-4e38-bea7-e5f4cd8cafe3.jpg' });
