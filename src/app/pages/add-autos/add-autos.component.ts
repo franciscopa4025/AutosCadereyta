@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Auto } from 'src/app/Entidades/Auto';
 import { ApiService } from 'src/app/service/api.service';
 
@@ -31,7 +32,7 @@ export class AddAutosComponent implements OnInit{
 
 
   constructor(
-    private formBuilder: FormBuilder, private apiService:ApiService// Inyecta DatePipe
+    private formBuilder: FormBuilder, private apiService:ApiService,private router: Router,private route: ActivatedRoute// Inyecta DatePipe
   ) {
     for (let year = 1992; year <= 2024; year++) {
       this.ano.push(year);
@@ -119,6 +120,7 @@ export class AddAutosComponent implements OnInit{
       this.apiService.agregarautos(this.registrationForm.value).subscribe(
         (response) => {
           console.log('Solicitud POST exitosa:', response);
+          this.router.navigate(['/admi']);
           // Realiza acciones adicionales si es necesario
         },
         (error) => {

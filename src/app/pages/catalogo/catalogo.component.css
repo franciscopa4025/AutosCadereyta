@@ -17,7 +17,7 @@
   overflow: hidden; /* Oculta el texto que exceda el contenedor */
   text-overflow: ellipsis; /* Agrega puntos suspensivos (...) al final del texto recortado */
 
-  height: 2.6em; /* Evita que el texto se divida en varias líneas */
+  height: 3.0em; /* Evita que el texto se divida en varias líneas */
 }
 
 .custom-card .card-title {
