@@ -7,7 +7,7 @@ import { Auto } from '../Entidades/Auto';
   providedIn: 'root'
 })
 export class ApiService {
-  private urlApi="https://autoscadereytaapi20231006141615.azurewebsites.net/api/"
+  private urlApi="https://www.apiautoscadereyta.somee.com/api/"
 public getAutosMarcas():Observable<any>{
     return this.http.get<any>(this.urlApi+"autos/marca");
   }
@@ -107,7 +107,7 @@ public getAutosMarcas():Observable<any>{
       formData.append('Foto7Url', data.Foto7Url, 'foto7.jpg');
     }
 
-    return this.http.post<Auto>(`${this.urlApi}/autos`, formData);
+    return this.http.post<Auto>(`${this.urlApi}autos`, formData);
   }
 
   patchauto(id: number,formData:any): Observable<any> {
